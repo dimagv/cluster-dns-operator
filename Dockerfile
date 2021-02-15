@@ -1,7 +1,7 @@
 FROM golang:1.15 AS builder
 WORKDIR /dns-operator
 COPY . .
-RUN make build
+RUN make all
 
 FROM registry.access.redhat.com/ubi8
 COPY --from=builder /dns-operator/dns-operator /usr/bin/
