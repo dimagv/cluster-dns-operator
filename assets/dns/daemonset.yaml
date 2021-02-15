@@ -151,6 +151,7 @@ spec:
       dnsPolicy: Default
       nodeSelector:
         kubernetes.io/os: linux      
+        node-type: dns
       volumes:
       - name: config-volume
         configMap:
